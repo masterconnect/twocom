@@ -38,24 +38,6 @@
             margin-bottom: 2rem;
             color: #cccccc;
         }
-        .countdown {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 2rem;
-        }
-        .countdown-item {
-            text-align: center;
-        }
-        .countdown-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #ffffff;
-        }
-        .countdown-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            color: #888888;
-        }
         .contact {
             font-style: italic;
             color: #888888;
@@ -74,55 +56,9 @@
     <div class="container">
         <div class="content">
             <h1>TWO.COM</h1>
-            <p>We're crafting something extraordinary. Stay tuned.</p>
-            <div class="countdown" id="countdown">
-                <div class="countdown-item">
-                    <div class="countdown-number" id="months">00</div>
-                    <div class="countdown-label">Months</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="days">00</div>
-                    <div class="countdown-label">Days</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="hours">00</div>
-                    <div class="countdown-label">Hours</div>
-                </div>
-                <div class="countdown-item">
-                    <div class="countdown-number" id="minutes">00</div>
-                    <div class="countdown-label">Minutes</div>
-                </div>
-            </div>
+            <p>We're crafting something extraordinary.</p>
             <p class="contact">Questions? Reach out: <a href="mailto:x@two.com">x@two.com</a></p>
         </div>
     </div>
-
-    <script>
-        const launchDate = new Date();
-        launchDate.setMonth(launchDate.getMonth() + 4);
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = launchDate - now;
-
-            const months = Math.floor(distance / (1000 * 60 * 60 * 24 * 30));
-            const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-            document.getElementById("months").textContent = months.toString().padStart(2, '0');
-            document.getElementById("days").textContent = days.toString().padStart(2, '0');
-            document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
-
-            if (distance < 0) {
-                clearInterval(timer);
-                document.getElementById("countdown").innerHTML = "<p>We're here!</p>";
-            }
-        }
-
-        const timer = setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call to avoid delay
-    </script>
 </body>
 </html>
