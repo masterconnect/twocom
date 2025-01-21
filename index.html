@@ -1,64 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two.com</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-        }
-        .content {
-            text-align: center;
-            max-width: 600px;
-            padding: 2rem;
-        }
-        h1 {
-            font-size: 4rem;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(to right, #00ffff, #ff00ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #cccccc;
-        }
-        .contact {
-            font-style: italic;
-            color: #888888;
-        }
-        a {
-            color: #00ffff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #ff00ff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Verdana, sans-serif;
+      text-align: center;
+    }
+    .container {
+      margin-top: 60px;
+    }
+    .TWO {
+      font-size: 2em;
+      font-weight: bold; 
+    }
+    .normal-text {
+      font-size: 1.1em;
+      margin: 0.6em 0;
+      font-weight: 400; 
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="content">
-            <h1>TWO.COM</h1>
-            <p>Reserved for Future Use</p>
-            <p class="contact"><a href="mailto:x@two.com">x@two.com</a></p>
-        </div>
-    </div>
+  <div class="container">
+    <div class="TWO">TWO.com</div>
+    <div class="normal-text">Reserved for Future Use</div>
+    <div class="normal-text" id="email-container"></div>
+  </div>
+
+  <script>
+    const localPart = "support";
+    const domain = "two";
+    const tld = "com";
+
+    const emailAddress = localPart + "@" + domain + "." + tld;
+    const mailtoLink = "mailto:" + emailAddress;
+
+    const link = document.createElement("a");
+    link.href = mailtoLink;
+    link.textContent = emailAddress;
+
+    document.getElementById("email-container").appendChild(link);
+  </script>
 </body>
 </html>
