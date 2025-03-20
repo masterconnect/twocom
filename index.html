@@ -1,55 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Verdana, sans-serif;
-      text-align: center;
-    }
-    .container {
-      margin-top: 60px;
-    }
-    .TWO {
-      font-size: 2em;
-      font-weight: bold; 
-    }
-    .normal-text {
-      font-size: 1.1em;
-      margin: 0.6em 0;
-      font-weight: 400; 
-    }
-    a {
-      color: #333;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two.com - Domain For Sale</title>
+    <meta name="description" content="Two.com is a premium domain name for sale. Contact us to make an offer.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+    </style>
 </head>
-<body>
-  <div class="container">
-    <div class="TWO">Two.com</div>
-    <div class="normal-text">The Domain Is for Sale</div>
-    <div class="normal-text" id="email-container"></div>
-  </div>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white flex flex-col items-center justify-center min-h-screen py-10">
+    <div class="rounded-3xl shadow-2xl p-8 max-w-2xl w-full text-center transition-transform hover:scale-105 border border-gray-700">
+        <h1 class="text-5xl font-semibold text-emerald-400 mb-6">Two.com</h1>
+        <p class="text-2xl text-gray-300 mb-8">A premium domain name for sale.</p>
+        <p class="text-lg text-gray-400 mb-8">
+            Unlock the potential of Two.com for your business. This memorable and versatile domain is perfect for a variety of industries.
+        </p>
+        <div class="flex justify-center">
+            <a href="mailto:brian@gritbrokerage.com" class="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 ease-in-out text-lg shadow-md hover:shadow-lg text-shadow-md">
+                Make an Offer
+            </a>
+        </div>
+    </div>
 
-  <script>
-    const localPart = "Brian";
-    const domain = "gritbrokerage";
-    const tld = "com";
-
-    const emailAddress = localPart + "@" + domain + "." + tld;
-    const mailtoLink = "mailto:" + emailAddress;
-
-    const link = document.createElement("a");
-    link.href = mailtoLink;
-    link.textContent = emailAddress;
-
-    document.getElementById("email-container").appendChild(link);
-  </script>
+    <footer class="mt-12 text-center text-gray-500 text-sm">
+        Copyright &copy; 2024 Two.com. All rights reserved.
+    </footer>
+    <script>
+        // Placeholder for potential future JavaScript enhancements.
+        // For example, you could add analytics tracking or dynamic content updates here.
+        // window.onload = function() {
+        //   console.log("Page loaded");
+        // };
+    </script>
 </body>
 </html>
